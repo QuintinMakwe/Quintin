@@ -91,4 +91,18 @@
       </section>
     </div>
   </body>
+  <script>
+    function copyText(index) {
+      var copyText = document.querySelectorAll(".test");
+      var copied = document.querySelectorAll(".inputText");
+      copied[index].value = copyText[index].innerHTML;
+      if (copied[index].value !== undefined) {
+        copied[index].select();
+        document.execCommand("copy");
+        alert(`Copied ${copied[index].value}`);
+      } else {
+        console.log("not working");
+      }
+    }
+  </script>
 </html>
